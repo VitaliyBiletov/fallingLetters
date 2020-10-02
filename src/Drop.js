@@ -25,20 +25,14 @@ class Drop {
 
     go(posX){
        let posY = 100;
-        $(this.container).css('left', `${posX}px`);
-       const timerID = setInterval(()=> {
-           posY += 5;
-           $(this.container).css('top', `${posY}px`);
-           if (posY > document.documentElement.clientHeight){
-               clearTimeout(timerID);
-               this.container.remove();
-           }
-       }, 50)
-        console.log('go')
+       $(this.container).css('left', `${posX}px`);
+       $(this.container).animate({
+            top: `+=${document.documentElement.clientHeight}`,
+        }, 4000)
     }
 
     getWidth(){
-        return this.container.style.width;
+        return $(this.container).width();
     }
 }
 
