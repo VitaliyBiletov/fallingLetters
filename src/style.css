@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'NexaScriptLight';
+    src: url("./fonts/NexaScriptLight.ttf") format("truetype");
+}
+
+body{
+    background-color: #B0E0E6;
+}
+
+.container-start-button {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+}
+
+.button{
+    margin: auto 0;
+    width: 50vh;
+    height: 20vh;
+    border-radius: 20px;
+    font-family: NexaScriptLight;
+    font-size: 10vh;
+    background-color: #0489B1;
+    border: none;
+    color: white;
+    outline: none;
+    transition: background-color 200ms;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: darkslategrey;
+
+}
+
+.drop{
+    position: absolute;
+    width: 15vh;
+    top: 0;
+    /*   min-width:40px; */
+}
+
+.drop:hover{
+    cursor: pointer;
+}
+
+.containerWord{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.containerWord p{
+    /*display: none;*/
+    font-family: NexaScriptLight;
+    font-size: 9vh;
+    color: #0489B1;
+    text-align: center;
+}
+
+.containerDrop{
+    position: absolute;
+    z-index: 1;
+}
+
+.containerDrop img{
+    /*display: none;*/
+    width: 100%;
+}
