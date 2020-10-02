@@ -8,7 +8,9 @@ export default () => {
     const words = ['и','ш','й','л','у'];
     //Создание картинки
     const button = document.createElement('button');
-
+    $(button).addClass('button');
+    $(button).text('Начать');
+    $('.container-start-button').append(button);
 
     //---------------------//
     //Создание кнопки

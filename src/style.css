@@ -47,7 +47,7 @@ body{
     color: white;
     font-size: 20vh;
     font-weight: bold;
-    text-shadow: #394648 1px 1px 3px;
+    text-shadow: #557276 1px 1px 3px;
 }
 
 .container-start-button {
@@ -65,18 +65,17 @@ body{
     border-radius: 20px;
     font-family: NexaScriptLight;
     font-size: 10vh;
-    background-color: #72c8d2;
+    background-color: #a1d1d8;
     border: none;
-    color: white;
+    color: #4c7a80;
     outline: none;
-    transition: background-color 200ms;
+    transition: 500ms;
     cursor: pointer;
-    color: #394648;
-    box-shadow: #394648 1px 1px 1px;
+    box-shadow: #557276 1px 1px 3px;
 }
 
 .button:hover{
-    background-color: darkslategrey;
+    background-color: #629097;
     color: white;
 }
 
