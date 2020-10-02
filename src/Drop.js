@@ -24,7 +24,7 @@ class Drop {
     }
 
     go(posX){
-       let posY = 0;
+       let posY = 100;
         $(this.container).css('left', `${posX}px`);
        const timerID = setInterval(()=> {
            posY += 5;
@@ -35,6 +35,10 @@ class Drop {
            }
        }, 50)
         console.log('go')
+    }
+
+    getWidth(){
+        return this.container.style.width;
     }
 }
 

@@ -11,7 +11,7 @@ export default () => {
             const body = document.querySelector('body');
             const clientWidth = document.documentElement.clientWidth;
             const drop = new Drop(getRandomWord(words));
-            const randomPosX = Math.random() * clientWidth;
+            const randomPosX = Math.random() * clientWidth - drop.getWidth();
             body.appendChild(drop.container);
             drop.go(randomPosX);
             setInterval(()=>{
