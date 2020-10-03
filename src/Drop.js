@@ -28,7 +28,12 @@ class Drop {
        $(this.container).css('left', `${posX}px`);
        $(this.container).animate({
             top: `+=${document.documentElement.clientHeight}`,
-        }, 4000)
+        }, 4000, () => {
+           console.log(document.documentElement.clientHeight);
+           if ($(this.container).position().top > document.documentElement.clientHeight - 200){
+               this.container.remove();
+           }
+       })
     }
 
     getWidth(){

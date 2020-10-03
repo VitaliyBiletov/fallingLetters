@@ -30,10 +30,11 @@ export default () => {
     $(document).ready(()=>{
         $('.cloud').fadeIn(1000);
         $('.container-start-button').fadeIn(3000);
-        $('.container-title').fadeIn(2000);
+        $('.container-title').fadeIn(3000);
         $('.drop-info').addClass('go');
         $('.button').click(function(){
             $('.button').fadeOut(300);
+            $('.container-title').hide(400);
             $('.drop-info').removeClass('go');
             // setTimeout(()=>{
                 const body = document.querySelector('body');
@@ -51,6 +52,7 @@ export default () => {
                     console.log('max ', max);
                     const randomPosX = Math.round(Math.random() * (max - min) + min);
                     drop.go(randomPosX);
+
                 }, 2000)
             // }, 500)
             console.log('width:', drop.getWidth())

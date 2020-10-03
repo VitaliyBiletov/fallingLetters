@@ -31,7 +31,7 @@ body{
 }
 
 .drop-info-img img{
-    width: 35vh;
+    width: 25vh;
 }
 
 .container-title{
@@ -39,13 +39,13 @@ body{
     position: absolute;
     width: 100%;
     text-align: center;
-    top: 15vh;
+    top: 10vh;
 }
 
 .container-title h1{
     font-family: NexaScriptLight;
     color: white;
-    font-size: 20vh;
+    font-size: 25vh;
     font-weight: bold;
     text-shadow: #557276 1px 1px 3px;
 }
