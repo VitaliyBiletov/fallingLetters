@@ -3,6 +3,10 @@
     src: url("./fonts/NexaScriptLight.ttf") format("truetype");
 }
 
+* {
+    font-family: NexaScriptLight;
+}
+
 body{
     background-color: #B0E0E6;
     margin: 0 auto;
@@ -35,15 +39,12 @@ body{
 }
 
 .container-title{
-    display: none;
     position: absolute;
     width: 100%;
-    text-align: center;
-    top: 10vh;
-}
-
-.container-title h1{
-    font-family: NexaScriptLight;
+    left: 0;
+    opacity: 0;
+    /*text-align: center;*/
+    top: -70px;
     color: white;
     font-size: 25vh;
     font-weight: bold;
@@ -63,7 +64,6 @@ body{
     width: 50vh;
     height: 20vh;
     border-radius: 20px;
-    font-family: NexaScriptLight;
     font-size: 10vh;
     background-color: #a1d1d8;
     border: none;
@@ -98,7 +98,6 @@ body{
 
 .containerWord p{
     /*display: none;*/
-    font-family: NexaScriptLight;
     font-size: 9vh;
     color: #0489B1;
     text-align: center;

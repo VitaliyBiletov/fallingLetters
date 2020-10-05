@@ -2,6 +2,7 @@ import $ from 'jquery';
 import box2d from 'box2d';
 import { Drop } from './Drop.js';
 import dropImg from './img/drop-info-img.png'
+import CircleType from 'circletype';
 
 export default () => {
     //const drop = document.querySelector('.drop');
@@ -22,18 +23,27 @@ export default () => {
     //---------------------//
     //Создание заголовка
     const containerTitle = document.querySelector('.container-title');
-    const title = document.createElement('h1');
-    title.textContent = 'Буквапельки';
-    containerTitle.appendChild(title);
+    //const title = document.createElement('h1');
+    containerTitle.textContent = 'Буквапельки';
+    //containerTitle.appendChild(title);
     //---------------------//
 
     $(document).ready(()=>{
         $('.cloud').fadeIn(1000);
-        $('.container-start-button').fadeIn(3000);
-        $('.container-title').fadeIn(3000);
+        $('.container-start-button').fadeIn(2000);
+        //$('.container-title').fadeIn(3000);
+
+        const circleTitleText = new CircleType(document.querySelector('.container-title'));
+        circleTitleText.radius(1000).dir(1);
+
+        $('.container-title').animate({
+            top: `+=${35}vh`,
+            opacity: 1,
+        }, 1000)
+
         $('.drop-info').addClass('go');
         $('.button').click(function(){
-            $('.button').fadeOut(300);
+            $('.button').fadeOut(200);
             $('.container-title').hide(400);
             $('.drop-info').removeClass('go');
             // setTimeout(()=>{
