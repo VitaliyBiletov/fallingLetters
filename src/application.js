@@ -37,7 +37,7 @@ export default () => {
         circleTitleText.radius(1000).dir(1);
 
         $('.container-title').animate({
-            top: `+=${35}vh`,
+            top: `+=${25}vh`,
             opacity: 1,
         }, 1000)
 
