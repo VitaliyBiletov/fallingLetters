@@ -1,4 +1,4 @@
-import dropImage from './img/drop.png'
+import dropImage from './img/drop.gif'
 import $ from "jquery";
 
 class Drop {
