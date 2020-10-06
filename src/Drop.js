@@ -32,12 +32,19 @@ class Drop {
            console.log(document.documentElement.clientHeight);
            if ($(this.container).position().top > document.documentElement.clientHeight - 200){
                this.container.remove();
+               delete this;
+
            }
        })
     }
 
     getWidth(){
         return $(this.container).width();
+    }
+
+    remove(){
+        this.container.remove();
+        delete this;
     }
 }
 

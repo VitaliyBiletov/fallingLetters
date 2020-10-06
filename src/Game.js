@@ -11,6 +11,11 @@ export class Game {
         drop.go(randomPosX);
         setInterval(()=>{
             const drop = new Drop(getRandomWord(words));
+
+            drop.container.addEventListener('click',()=>{
+                drop.remove();
+            })
+
             body.appendChild(drop.container);
             const min = drop.getWidth();
             const max = document.documentElement.clientWidth - min;
