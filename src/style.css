@@ -26,13 +26,9 @@ body{
 .drop-info{
     position: absolute;
     top: 30vh;
-    right: -50vh;
+    right: -25vh;
     transition: right 2s;
 }
-
-/*.go{*/
-/*    right: -5vh;*/
-/*}*/
 
 .drop-info-img img{
     width: 25vh;
@@ -44,7 +40,7 @@ body{
     left: 0;
     opacity: 0;
     /*text-align: center;*/
-    top: -70px;
+    top: 0;
     color: white;
     font-size: 25vh;
     font-weight: bold;
@@ -82,7 +78,7 @@ body{
 .drop{
     position: absolute;
     width: 15vh;
-    top: 100px;
+    top: 5vh;
     /*   min-width:40px; */
 }
 
