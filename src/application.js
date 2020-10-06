@@ -37,15 +37,19 @@ export default () => {
         circleTitleText.radius(1000).dir(1);
 
         $('.container-title').animate({
-            top: `+=${35}vh`,
+            top: `+=${30}vh`,
             opacity: 1,
         }, 1000)
 
-        $('.drop-info').addClass('go');
+        $('.drop-info').animate({
+            right: `-${5}vh`,
+        })
+
+        //$('.drop-info').addClass('go');
         $('.button').click(function(){
-            $('.button').fadeOut(200);
-            $('.container-title').hide(400);
-            $('.drop-info').removeClass('go');
+            $('.container-start-button').hide(300);
+            $('.container-title').hide(300);
+            $('.drop-info').hide(300);
             // setTimeout(()=>{
                 const body = document.querySelector('body');
                 const clientWidth = document.documentElement.clientWidth;

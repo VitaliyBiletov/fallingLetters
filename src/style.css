@@ -30,9 +30,9 @@ body{
     transition: right 2s;
 }
 
-.go{
-    right: -5vh;
-}
+/*.go{*/
+/*    right: -5vh;*/
+/*}*/
 
 .drop-info-img img{
     width: 25vh;
