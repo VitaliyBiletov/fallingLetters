@@ -3,6 +3,11 @@
     src: url("./fonts/NexaScriptLight.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: 'PropisiRU';
+    src: url("./fonts/PropisiRU.ttf") format("truetype");
+}
+
 * {
     font-family: NexaScriptLight;
 }
@@ -95,6 +100,7 @@ body{
 
 .containerWord p{
     /*display: none;*/
+    font-family: PropisiRU;
     font-size: 9vh;
     color: #0489B1;
     text-align: center;
