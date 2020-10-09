@@ -41,19 +41,24 @@ export default () => {
 
         $('.drop-info').animate({
             right: `-${3}vh`
-        }, { duration: 1000, queue: false})
+        }, { duration: 500, queue: false})
 
         $('.container-title').animate({
-            top: `+=${25}vh`,
+            top: `+=${20}vh`,
             opacity: 1,
         }, { duration: 1000, queue: false})
 
         $('.button').click(function(){
-            $('.button').fadeOut(200);
-            $('.container-title').hide(400);
-            $('.drop-info').hide(200);
-            const game = new Game();
-            game.start();
+            $('.container').fadeOut(200);
+            $('.titleLowerLetters').text('Строчные буквы');
+            $('.titleUpperLetters').text('Прописные буквы');
+            $('.containerCollectionLetters').css('display', 'flex');
+            $('.containerCollectionLetters').animate({
+                opacity: 1,
+            }, { duration: 1000, queue: false})
+            //$('.containerCollectionLetters').css('display','flex');
+            // const game = new Game();
+            // game.start();
         })
         })
 }

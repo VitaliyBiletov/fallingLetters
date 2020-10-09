@@ -35,7 +35,7 @@ body{
 .drop-info{
     position: absolute;
     top: 30vh;
-    right: -25vh;
+    right: -30vh;
     transition: right 2s;
 }
 
@@ -48,8 +48,6 @@ body{
     width: 100%;
     left: 0;
     opacity: 0;
-    /*text-align: center;*/
-    top: 0;
     color: white;
     font-size: 25vh;
     font-weight: bold;
@@ -69,6 +67,7 @@ body{
     width: 50vh;
     height: 20vh;
     border-radius: 20px;
+    font-family: NexaScriptLight;
     font-size: 10vh;
     background-color: #a1d1d8;
     border: none;
@@ -123,15 +122,18 @@ body{
 /*collectionLetters*/
 .containerCollectionLetters {
     display: none;
+    opacity: 0;
     font-family: PropisiRU;
     position: relative;
     margin-top: 90px;
     flex-direction: row;
-
 }
 
 @media screen and (max-width: 880px) {
-    .container {flex-direction: column;}
+    .containerCollectionLetters {flex-direction: column;}
+    body {overflow-y: auto}
+    .container-title{ font-size: 15vh; }
+    .drop-info{ top: 40vh; }
 }
 
 .containerLowercaseLetters{
@@ -153,9 +155,10 @@ body{
     box-shadow: 1px 1px 5px #8D8D8D;
 }
 
-.setOfLetters h2{
+.containerCollectionLetters h2{
     font-size: 50pt;
     text-align: center;
+    margin: 0 auto;
     color: #fff;
     text-shadow: 1px 1px 1px #8D8D8D;
 }
