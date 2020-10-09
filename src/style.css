@@ -9,13 +9,17 @@
 }
 
 * {
-    font-family: NexaScriptLight;
+
 }
 
 body{
     background-color: #B0E0E6;
     margin: 0 auto;
     overflow: hidden
+}
+
+.container{
+    font-family: NexaScriptLight;
 }
 
 .cloud{
@@ -114,4 +118,67 @@ body{
 .containerDrop img {
     /*display: none;*/
     width: 100%;
+}
+
+/*collectionLetters*/
+.containerCollectionLetters {
+    display: none;
+    font-family: PropisiRU;
+    position: relative;
+    margin-top: 90px;
+    flex-direction: row;
+
+}
+
+@media screen and (max-width: 880px) {
+    .container {flex-direction: column;}
+}
+
+.containerLowercaseLetters{
+    text-align: center;
+}
+
+.containerUppercaseLetters{
+    text-align: center;
+}
+
+.setOfLetters{
+    display: inline-block;
+    position: relative;
+    max-width: 155vh;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #a1d1d8;
+    box-shadow: 1px 1px 5px #8D8D8D;
+}
+
+.setOfLetters h2{
+    font-size: 50pt;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #8D8D8D;
+}
+
+.setOfLetters span{
+    display: block;
+    font-size: 25pt;
+    font-weight: bold;
+    float: left;
+    margin: 5px;
+    padding: 5px 20px;
+    color: #55696c;
+    border-radius: 25%;
+    background-color: #D5F5F9;
+    box-shadow: 2px 2px 2px #90b7bc;
+}
+
+.setOfLetters span:hover{
+    /*	transition: 500ms;*/
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #90b7bc inset;
+
+    /*	box-shadow: 3px 3px 2px #8D8D8D;*/
+
 }
