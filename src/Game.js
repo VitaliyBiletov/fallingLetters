@@ -1,8 +1,9 @@
 import {Drop} from "./Drop";
 
 export class Game {
-    start(collectionLetters){
+    start(letter, collectionLetters){
         const words = collectionLetters;
+        words.push(letter);
         console.log('words:', words);
         const body = document.querySelector('body');
         const clientWidth = document.documentElement.clientWidth;

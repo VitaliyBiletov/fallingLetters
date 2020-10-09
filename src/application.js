@@ -33,7 +33,6 @@ export default () => {
 
         $('.cloud').fadeIn(1000);
         $('.container-start-button').fadeIn(2000);
-        //$('.container-title').fadeIn(3000);
 
         const circleTitleText = new CircleType(document.querySelector('.container-title'));
         circleTitleText.radius(1000).dir(1);
@@ -55,15 +54,6 @@ export default () => {
             $('.containerCollectionLetters').animate({
                 opacity: 1,
             }, { duration: 1000, queue: false})
-            //$('.containerCollectionLetters').css('display','flex');
-            // const game = new Game();
-            // game.start();
         })
         })
 }
-
-const getRandomWord = (words) => {
-    const randomNum = Math.round(Math.random() * (words.length - 1));
-    return words[randomNum];
-}
-

@@ -78,7 +78,7 @@ export const setOfLetters = () => {
             //console.log(setOfLowercaseLetters[letter]);
             $('.containerCollectionLetters').hide(200);
             const game = new Game();
-            game.start(setOfLowercaseLetters[letter]);
+            game.start(letter, setOfLowercaseLetters[letter]);
         })
     }
 
@@ -96,7 +96,7 @@ export const setOfLetters = () => {
         span.addEventListener('click', function(){
             $('.containerCollectionLetters').hide(200);
             const game = new Game();
-            game.start(setOfUppercaseLetters[letter]);
+            game.start(letter, setOfUppercaseLetters[letter]);
             //console.log(setOfUppercaseLetters[letter]);
         })
     }
