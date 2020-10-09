@@ -1,3 +1,6 @@
+import { Game } from './Game.js';
+import $ from 'jquery';
+
 export const setOfLetters = () => {
     const setOfLowercaseLetters = {
         'а' : ['о', 'д'],
@@ -72,7 +75,10 @@ export const setOfLetters = () => {
         span.textContent = letter;
         containerLowercaseLetters.appendChild(span);
         span.addEventListener('click', function(){
-            alert(setOfLowercaseLetters[letter]);
+            //console.log(setOfLowercaseLetters[letter]);
+            $('.containerCollectionLetters').hide(200);
+            const game = new Game();
+            game.start(setOfLowercaseLetters[letter]);
         })
     }
 
@@ -88,7 +94,10 @@ export const setOfLetters = () => {
         span.textContent = letter;
         containerUppercaseLetters.appendChild(span);
         span.addEventListener('click', function(){
-            alert(setOfUppercaseLetters[letter]);
+            $('.containerCollectionLetters').hide(200);
+            const game = new Game();
+            game.start(setOfUppercaseLetters[letter]);
+            //console.log(setOfUppercaseLetters[letter]);
         })
     }
 }

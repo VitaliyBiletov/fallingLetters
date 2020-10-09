@@ -15,6 +15,7 @@ class Drop {
         this.containerWord.classList.add('containerWord');
         this.containerDrop.classList.add('containerDrop')
         this.container.classList.add('drop');
+        this.container.datasetWord = word;
 
         this.containerDrop.appendChild(this.image);
         this.containerWord.appendChild(this.word);

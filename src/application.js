@@ -35,7 +35,6 @@ export default () => {
         $('.container-start-button').fadeIn(2000);
         //$('.container-title').fadeIn(3000);
 
-
         const circleTitleText = new CircleType(document.querySelector('.container-title'));
         circleTitleText.radius(1000).dir(1);
 

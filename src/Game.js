@@ -1,8 +1,9 @@
 import {Drop} from "./Drop";
 
 export class Game {
-    start(){
-        const words = ['и','ш','й','л','у'];
+    start(collectionLetters){
+        const words = collectionLetters;
+        console.log('words:', words);
         const body = document.querySelector('body');
         const clientWidth = document.documentElement.clientWidth;
         const drop = new Drop(getRandomWord(words));
@@ -24,8 +25,10 @@ export class Game {
         }, 2000)
     }
 }
+
 const getRandomWord = (words) => {
     const randomNum = Math.round(Math.random() * (words.length - 1));
     return words[randomNum];
 }
+
 
