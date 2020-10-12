@@ -3,14 +3,23 @@
     src: url("./fonts/NexaScriptLight.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: 'PropisiRU';
+    src: url("./fonts/PropisiRU.ttf") format("truetype");
+}
+
 * {
-    font-family: NexaScriptLight;
+
 }
 
 body{
     background-color: #B0E0E6;
     margin: 0 auto;
     overflow: hidden
+}
+
+.container{
+    font-family: NexaScriptLight;
 }
 
 .cloud{
@@ -26,12 +35,8 @@ body{
 .drop-info{
     position: absolute;
     top: 30vh;
-    right: -50vh;
+    right: -30vh;
     transition: right 2s;
-}
-
-.go{
-    right: -5vh;
 }
 
 .drop-info-img img{
@@ -43,12 +48,14 @@ body{
     width: 100%;
     left: 0;
     opacity: 0;
-    /*text-align: center;*/
-    top: -70px;
     color: white;
     font-size: 25vh;
     font-weight: bold;
     text-shadow: #557276 1px 1px 3px;
+}
+
+.container-title span{
+    margin: 0;
 }
 
 .container-start-button {
@@ -64,6 +71,7 @@ body{
     width: 50vh;
     height: 20vh;
     border-radius: 20px;
+    font-family: NexaScriptLight;
     font-size: 10vh;
     background-color: #a1d1d8;
     border: none;
@@ -82,7 +90,7 @@ body{
 .drop{
     position: absolute;
     width: 15vh;
-    top: 100px;
+    top: 5vh;
     /*   min-width:40px; */
 }
 
@@ -99,9 +107,16 @@ body{
 
 .containerWord p{
     /*display: none;*/
+    font-family: PropisiRU;
     font-size: 9vh;
     color: #0489B1;
     text-align: center;
+}
+
+.drop-funny{
+    position: absolute;
+    top: 50px;
+    left: 50px;
 }
 
 .containerDrop{
@@ -109,7 +124,74 @@ body{
     z-index: 1;
 }
 
-.containerDrop img{
+.containerDrop img {
     /*display: none;*/
     width: 100%;
+}
+
+/*collectionLetters*/
+.containerCollectionLetters {
+    display: none;
+    opacity: 0;
+    font-family: PropisiRU;
+    position: relative;
+    margin-top: 90px;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 880px) {
+    .containerCollectionLetters {flex-direction: column;}
+    body {overflow-y: auto}
+    .container-title{ font-size: 15vh; }
+    .drop-info{ top: 40vh; }
+}
+
+.containerLowercaseLetters{
+    text-align: center;
+}
+
+.containerUppercaseLetters{
+    text-align: center;
+}
+
+.setOfLetters{
+    display: inline-block;
+    position: relative;
+    max-width: 155vh;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #a1d1d8;
+    box-shadow: 1px 1px 5px #8D8D8D;
+}
+
+.containerCollectionLetters h2{
+    font-size: 10vh;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    text-shadow: 1px 1px 1px #8D8D8D;
+}
+
+.setOfLetters span{
+    display: block;
+    font-size: 25pt;
+    font-weight: bold;
+    float: left;
+    margin: 5px;
+    padding: 5px 20px;
+    color: #55696c;
+    border-radius: 25%;
+    background-color: #D5F5F9;
+    box-shadow: 2px 2px 2px #90b7bc;
+}
+
+.setOfLetters span:hover{
+    /*	transition: 500ms;*/
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px #90b7bc inset;
+
+    /*	box-shadow: 3px 3px 2px #8D8D8D;*/
+
 }

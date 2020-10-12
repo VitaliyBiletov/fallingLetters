@@ -15,6 +15,7 @@ class Drop {
         this.containerWord.classList.add('containerWord');
         this.containerDrop.classList.add('containerDrop')
         this.container.classList.add('drop');
+        this.container.setAttribute('data-word', `${word}`);
 
         this.containerDrop.appendChild(this.image);
         this.containerWord.appendChild(this.word);
@@ -32,12 +33,19 @@ class Drop {
            console.log(document.documentElement.clientHeight);
            if ($(this.container).position().top > document.documentElement.clientHeight - 200){
                this.container.remove();
+               delete this;
+
            }
        })
     }
 
     getWidth(){
         return $(this.container).width();
+    }
+
+    remove(){
+        this.container.remove();
+        delete this;
     }
 }
 

@@ -3,76 +3,57 @@ import box2d from 'box2d';
 import { Drop } from './Drop.js';
 import dropImg from './img/drop-info-img.png'
 import CircleType from 'circletype';
+import {Game} from './Game';
 
 export default () => {
-    //const drop = document.querySelector('.drop');
-    const words = ['и','ш','й','л','у'];
-    //Создание картинки
-    const button = document.createElement('button');
-    $(button).addClass('button');
-    $(button).text('Начать');
-    $('.container-start-button').append(button);
 
-    //---------------------//
-    //Создание кнопки
-    const dropInfoImg = document.querySelector('.drop-info-img');
-    const dropTagImg = document.createElement('img');
-    dropTagImg.src = dropImg;
-    //console.log(dropInfoImg);
-    dropInfoImg.appendChild(dropTagImg);
-    //---------------------//
-    //Создание заголовка
-    const containerTitle = document.querySelector('.container-title');
-    //const title = document.createElement('h1');
-    containerTitle.textContent = 'Буквапельки';
-    //containerTitle.appendChild(title);
-    //---------------------//
 
     $(document).ready(()=>{
+        //Создание картинки
+        const button = document.createElement('button');
+        $(button).addClass('button');
+        $(button).text('Начать');
+        $('.container-start-button').append(button);
+        //---------------------//
+
+        //Создание кнопки
+        const dropInfoImg = document.querySelector('.drop-info-img');
+        const dropTagImg = document.createElement('img');
+        dropTagImg.src = dropImg;
+        //console.log(dropInfoImg);
+        dropInfoImg.appendChild(dropTagImg);
+        //---------------------//
+
+        //Создание заголовка
+        const containerTitle = document.querySelector('.container-title');
+        const title = document.createElement('h1');
+        containerTitle.textContent = 'Буквапельки';
+        containerTitle.appendChild(title);
+        //---------------------//
+
         $('.cloud').fadeIn(1000);
         $('.container-start-button').fadeIn(2000);
-        //$('.container-title').fadeIn(3000);
 
         const circleTitleText = new CircleType(document.querySelector('.container-title'));
         circleTitleText.radius(1000).dir(1);
 
+        $('.drop-info').animate({
+            right: `-${3}vh`
+        }, { duration: 500, queue: false})
+
         $('.container-title').animate({
-            top: `+=${25}vh`,
+            top: `+=${20}vh`,
             opacity: 1,
-        }, 1000)
+        }, { duration: 1000, queue: false})
 
-        $('.drop-info').addClass('go');
         $('.button').click(function(){
-            $('.button').fadeOut(200);
-            $('.container-title').hide(400);
-            $('.drop-info').removeClass('go');
-            // setTimeout(()=>{
-                const body = document.querySelector('body');
-                const clientWidth = document.documentElement.clientWidth;
-                const drop = new Drop(getRandomWord(words));
-                const randomPosX = Math.random() * clientWidth - drop.getWidth();
-                body.appendChild(drop.container);
-                drop.go(randomPosX);
-                setInterval(()=>{
-                    const drop = new Drop(getRandomWord(words));
-                    body.appendChild(drop.container);
-                    const min = drop.getWidth();
-                    const max = document.documentElement.clientWidth - min;
-                    console.log('min ', min);
-                    console.log('max ', max);
-                    const randomPosX = Math.round(Math.random() * (max - min) + min);
-                    drop.go(randomPosX);
-
-                }, 2000)
-            // }, 500)
-            console.log('width:', drop.getWidth())
-            console.log(document.documentElement.clientWidth)
+            $('.container').fadeOut(200);
+            $('.titleLowerLetters').text('Строчные буквы');
+            $('.titleUpperLetters').text('Прописные буквы');
+            $('.containerCollectionLetters').css('display', 'flex');
+            $('.containerCollectionLetters').animate({
+                opacity: 1,
+            }, { duration: 1000, queue: false})
         })
         })
 }
-
-const getRandomWord = (words) => {
-    const randomNum = Math.round(Math.random() * (words.length - 1));
-    return words[randomNum];
-}
-
