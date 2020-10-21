@@ -7,7 +7,6 @@ import {Game} from './Game';
 
 export default () => {
 
-
     $(document).ready(()=>{
         //Создание картинки
         const button = document.createElement('button');
@@ -20,7 +19,6 @@ export default () => {
         const dropInfoImg = document.querySelector('.drop-info-img');
         const dropTagImg = document.createElement('img');
         dropTagImg.src = dropImg;
-        //console.log(dropInfoImg);
         dropInfoImg.appendChild(dropTagImg);
         //---------------------//
 
@@ -31,29 +29,32 @@ export default () => {
         containerTitle.appendChild(title);
         //---------------------//
 
-        $('.cloud').fadeIn(1000);
-        $('.container-start-button').fadeIn(2000);
+        $('.cloud').fadeIn(1000); //Появление облака сверху
+        $('.container-start-button').fadeIn(2000); //Появление кнопки "Начать"
 
         const circleTitleText = new CircleType(document.querySelector('.container-title'));
-        circleTitleText.radius(1000).dir(1);
+        circleTitleText.radius(1000).dir(1); //Изгиб заголовка
 
+        //Анимация капли справа
         $('.drop-info').animate({
             right: `-${3}vh`
         }, { duration: 500, queue: false})
 
+        //Анимация появления заголовка
         $('.container-title').animate({
             top: `+=${20}vh`,
             opacity: 1,
         }, { duration: 1000, queue: false})
 
+        //Событие при нажатии кнопки "Начать"
         $('.button').click(function(){
-            $('.container').fadeOut(200);
+            $('.container').fadeOut(200); //Скрытие основного контейнера
             $('.titleLowerLetters').text('Строчные буквы');
             $('.titleUpperLetters').text('Прописные буквы');
             $('.containerCollectionLetters').css('display', 'flex');
             $('.containerCollectionLetters').animate({
                 opacity: 1,
-            }, { duration: 1000, queue: false})
+            }, { duration: 1000, queue: false}) //Появление контейнера с выбором букв
         })
         })
 }

@@ -24,7 +24,7 @@ class Drop {
         this.container.appendChild(this.containerDrop);
     }
 
-    go(posX){
+    move(posX){
        let posY = 100;
        $(this.container).css('left', `${posX}px`);
        $(this.container).animate({

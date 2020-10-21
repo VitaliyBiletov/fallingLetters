@@ -1,4 +1,4 @@
-import {Drop} from "./Drop";
+import { Drop } from "./Drop";
 
 export class Game {
     start(letter, collectionLetters){
@@ -10,7 +10,7 @@ export class Game {
         const drop = new Drop(getRandomWord(words));
         const randomPosX = Math.random() * clientWidth - drop.getWidth();
         body.appendChild(drop.container);
-        drop.go(randomPosX);
+        drop.move(randomPosX);
         setInterval(()=>{
             const drop = new Drop(getRandomWord(words));
 
@@ -22,7 +22,7 @@ export class Game {
             const min = drop.getWidth();
             const max = document.documentElement.clientWidth - min;
             const randomPosX = Math.round(Math.random() * (max - min) + min);
-            drop.go(randomPosX);
+            drop.move(randomPosX);
         }, 2000)
     }
 }
