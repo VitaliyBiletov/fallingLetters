@@ -60,6 +60,11 @@ body{
     text-shadow: #557276 1px 1px 3px;
 }
 
+.container-title > div{
+    margin: 0 auto;
+    width: 5.9674em;
+}
+
 .container-title span{
     margin: 0;
 }
@@ -81,11 +86,12 @@ body{
     font-size: 10vh;
     background-color: #a1d1d8;
     border: none;
-    color: #4c7a80;
+    color: #fff;
     outline: none;
     transition: 500ms;
     cursor: pointer;
     box-shadow: #557276 1px 1px 3px;
+    text-shadow: #557276 1px 1px 3px;
 }
 
 .button:hover{

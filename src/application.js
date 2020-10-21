@@ -34,7 +34,9 @@ export default () => {
 
         const circleTitleText = new CircleType(document.querySelector('.container-title'));
         circleTitleText.radius(1000).dir(1); //Изгиб заголовка
-
+        console.log(circleTitleText.container);
+        circleTitleText.forceWidth(true);
+        console.log(circleTitleText.container);
         //Анимация капли справа
         $('.drop-info').animate({
             right: `-${3}vh`
