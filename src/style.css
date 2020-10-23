@@ -62,7 +62,7 @@ body{
 
 .container-title > div{
     margin: 0 auto;
-    width: 5.9674em;
+    width: 5em;
 }
 
 .container-title span{
@@ -84,7 +84,7 @@ body{
     border-radius: 20px;
     font-family: NexaScriptLight;
     font-size: 10vh;
-    background-color: #a1d1d8;
+    background-color: #FA8072;
     border: none;
     color: #fff;
     outline: none;
@@ -95,7 +95,7 @@ body{
 }
 
 .button:hover{
-    background-color: #629097;
+    background-color: #f8412c;
     color: white;
 }
 
@@ -172,12 +172,12 @@ body{
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
-    background-color: #a1d1d8;
+    background-image: linear-gradient(120deg, #ff9e81 0%, #ffbfaa 100%);
     box-shadow: 1px 1px 5px #8D8D8D;
 }
 
 .containerCollectionLetters h2{
-    font-size: 10vh;
+    font-size: 12vh;
     text-align: center;
     margin: 0 auto;
     color: #fff;
@@ -193,7 +193,7 @@ body{
     padding: 5px 20px;
     color: #55696c;
     border-radius: 25%;
-    background-color: #D5F5F9;
+    background-color: #fff;
     box-shadow: 2px 2px 2px #90b7bc;
 }
 
