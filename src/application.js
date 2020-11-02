@@ -38,8 +38,8 @@ export default () => {
 
         //Анимация капли справа
         $('.drop-info').animate({
-            right: `-${3}vh`
-        }, { duration: 500, queue: false})
+            right: `0`,
+        }, { duration: 1500, queue: false})
 
         //Анимация появления заголовка
         $('.container-title').animate({

@@ -12,13 +12,15 @@ html, body{ height: 100%; }
 body{
     margin: 0 auto;
     overflow: hidden;
-}
-
-.main {
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background: #b9dbdf;
     width:100%;
     height: 100%;
-    min-width: 500px;
+}
+
+.main{
+    /*background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);*/
+    width:100%;
+    height: 100%;
 }
 
 .container{
@@ -37,29 +39,26 @@ body{
 
 .drop-info{
     position: absolute;
-    top: 30vh;
-    right: -30vh;
-    transition: right 2s;
+    top: 25px;
+    right: -200px;
+    text-align: right;
 }
 
 .drop-info-img img{
-    width: 25vh;
+    width: 80%;
 }
 
 .container-title{
     position: absolute;
-    top: -20px;
+    top: 0;
     width: 100%;
     left: 0;
     opacity: 0;
     color: white;
-    font-size: 25vh;
+    text-align: center;
+    font-size: 13em;
     font-weight: bold;
     text-shadow: #557276 1px 1px 3px;
-}
-
-.container-title h1{
-    text-align: center;
 }
 
 .container-start-button {
@@ -72,10 +71,10 @@ body{
 
 .button{
     margin: auto 0;
-    width: 50vh;
-    height: 20vh;
+    width: 300px;
+    height: 150px;
     border-radius: 20px;
-    font-size: 10vh;
+    font-size: 4em;
     font-family: 'Pacifico', cursive;
     background-color: #FA8072;
     border: none;
@@ -131,23 +130,20 @@ body{
 
 .containerDrop img {
     /*display: none;*/
-    width: 100%;
+    width: 100px;
 }
 
 /*collectionLetters*/
 .containerCollectionLetters {
+    position: relative;
     display: none;
+    width: 100%;
+    top: -100px;
     opacity: 0;
     font-family: PropisiRU;
-    position: relative;
     flex-direction: row;
-}
 
-@media screen and (max-width: 880px) {
-    .containerCollectionLetters {flex-direction: column;}
-    body {overflow-y: auto}
-    .container-title{ font-size: 15vh; }
-    .drop-info{ top: 40vh; }
+    justify-content: space-around
 }
 
 .containerLowercaseLetters{
@@ -159,18 +155,39 @@ body{
 }
 
 .setOfLetters{
-    display: inline-block;
     position: relative;
-    max-width: 155vh;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    /*width: 600px;*/
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 5px;
-    background-image: linear-gradient(120deg, #ff9e81 0%, #ffbfaa 100%);
+    border-radius: 10px;
+    background-color: #ff9e81;
     box-shadow: 1px 1px 5px #8D8D8D;
 }
 
+@media screen and (max-width: 1250px) {
+    .containerCollectionLetters {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {overflow-y: auto}
+    .container-title{ font-size: 15vw; }
+    .containerCollectionLetters {
+        width: 500px;
+    }
+    .setOfLetters{
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+    }
+}
+
 .containerCollectionLetters h2{
-    font-size: 12vh;
+    font-size: 7vw;
     text-align: center;
     margin: 0 auto;
     color: #fff;
@@ -178,10 +195,10 @@ body{
 }
 
 .setOfLetters span{
-    display: block;
     font-size: 25pt;
     font-weight: bold;
-    float: left;
+    align-self: start;
+    /*float: left;*/
     margin: 5px;
     padding: 5px 20px;
     color: #55696c;
