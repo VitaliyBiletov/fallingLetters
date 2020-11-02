@@ -1,11 +1,10 @@
 @font-face {
-    font-family: 'NexaScriptLight';
-    src: url("./fonts/NexaScriptLight.ttf") format("truetype");
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 }
 
 @font-face {
     font-family: 'PropisiRU';
-    src: url("./fonts/PropisiRU.ttf") format("truetype");
+    src: url("./fonts/PropisiRU.ttf");
 }
 
 html, body{ height: 100%; }
@@ -13,7 +12,6 @@ html, body{ height: 100%; }
 body{
     margin: 0 auto;
     overflow: hidden;
-
 }
 
 .main {
@@ -24,7 +22,7 @@ body{
 }
 
 .container{
-    font-family: NexaScriptLight;
+    font-family: 'Pacifico', cursive;
 }
 
 .cloud{
@@ -49,8 +47,8 @@ body{
 }
 
 .container-title{
-    position: relative;
-    top: -20vh;
+    position: absolute;
+    top: -20px;
     width: 100%;
     left: 0;
     opacity: 0;
@@ -60,13 +58,8 @@ body{
     text-shadow: #557276 1px 1px 3px;
 }
 
-.container-title > div{
-    margin: 0 auto;
-    width: 5em;
-}
-
-.container-title span{
-    margin: 0;
+.container-title h1{
+    text-align: center;
 }
 
 .container-start-button {
@@ -82,8 +75,8 @@ body{
     width: 50vh;
     height: 20vh;
     border-radius: 20px;
-    font-family: NexaScriptLight;
     font-size: 10vh;
+    font-family: 'Pacifico', cursive;
     background-color: #FA8072;
     border: none;
     color: #fff;

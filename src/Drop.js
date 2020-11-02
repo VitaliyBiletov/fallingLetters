@@ -1,5 +1,5 @@
-import dropImage from './img/drop.gif'
 import $ from "jquery";
+import dropImage from './img/drop.gif'
 
 class Drop {
     constructor(word) {
