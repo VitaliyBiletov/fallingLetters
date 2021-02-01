@@ -30,7 +30,6 @@ class Drop {
        $(this.container).animate({
             top: `+=${document.documentElement.clientHeight}`,
         },3000, () => {
-           console.log(document.documentElement.clientHeight);
            if ($(this.container).position().top > document.documentElement.clientHeight - 200){
                this.container.remove();
                delete this;

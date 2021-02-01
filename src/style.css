@@ -37,6 +37,13 @@ body{
     top: 0;
 }
 
+#selectedLetter span{
+    font-family: PropisiRU;
+    font-size: 9vh;
+    color: #0489B1;
+    margin: 10px;
+}
+
 .drop-info{
     position: absolute;
     top: 25px;
