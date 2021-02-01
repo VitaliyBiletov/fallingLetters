@@ -20,7 +20,9 @@ class Drop {
         this.containerDrop.appendChild(this.image);
         this.containerWord.appendChild(this.word);
 
-        this.container.appendChild(this.containerWord);
+        this.containerDrop.appendChild(this.containerWord);
+
+        //this.container.appendChild(this.containerWord);
         this.container.appendChild(this.containerDrop);
     }
 

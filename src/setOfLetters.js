@@ -80,9 +80,10 @@ export const setOfLetters = () => {
     }
 
     const uppercaseLetters = Object.keys(setOfUppercaseLetters);
-    for(const values of setOfUppercaseLetters['А']){
-        console.log(values);
-    }
+
+    // for(const values of setOfUppercaseLetters['А']){
+    //     console.log(values);
+    // }
 
     const containerUppercaseLetters = document.querySelector('.containerUppercaseLetters .setOfLetters');
 
