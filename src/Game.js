@@ -22,11 +22,14 @@ export class Game {
         // })
         $('#selectedLetter span').text(`Поймай только буквы: ${letter}`);
         setInterval(()=>{
-            const drop = new Drop(getRandomWord(words));
-            drop.container.addEventListener('click',()=>{
+            const currentLetter = getRandomWord(words);
+            const drop = new Drop(currentLetter);
+            drop.container.addEventListener('click',(e)=>{
                 drop.remove();
-                this.score += 1;
-                console.log(this.score);
+                if (currentLetter == letter){
+                    this.score += 1;
+                    alert(`Счёт: ${this.score}`);
+                }
             })
 
             body.appendChild(drop.container);

@@ -35,7 +35,6 @@ class Drop {
            if ($(this.container).position().top > document.documentElement.clientHeight - 200){
                this.container.remove();
                delete this;
-
            }
        })
     }
