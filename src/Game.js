@@ -14,7 +14,7 @@ export class Game {
         words.push(letter);
         //console.log('words:', words);
         const body = document.querySelector('body');
-        const clientWidth = document.documentElement.clientWidth;
+        // const clientWidth = document.documentElement.clientWidth;
         // const drop = new Drop(getRandomWord(words));
         // const randomPosX = Math.random() * clientWidth - drop.getWidth();
         // body.appendChild(drop.container);
