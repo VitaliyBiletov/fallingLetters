@@ -24,7 +24,7 @@ export class Game {
         //     this.score += 1;
         //     console.log(this.score);
         // })
-        $('#selectedLetter span').text(`Поймай только буквы: ${letter}`);
+        $('#selectedLetter #letter').text(`Поймай только буквы: ${letter}`);
         setInterval(()=>{
             const currentLetter = getRandomWord(words);
             const drop = new Drop(currentLetter);

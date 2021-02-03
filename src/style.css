@@ -37,11 +37,21 @@ body{
     top: 0;
 }
 
-#selectedLetter span{
+#selectedLetter {
     font-family: PropisiRU;
     font-size: 9vh;
     color: #0489B1;
-    margin: 10px;
+    margin: 0;
+}
+
+#selectedLetter #letter {
+    float: left;
+    margin: 0 20px;
+}
+
+#selectedLetter #timer {
+    float: right;
+    margin: 0 20px;
 }
 
 .drop-info{
