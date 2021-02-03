@@ -1,4 +1,5 @@
 import { Drop } from "./Drop";
+import { Timer } from "./Timer";
 import $ from 'jquery';
 
 export class Game {
@@ -6,6 +7,9 @@ export class Game {
         this.score = 0;
     }
     start(letter, collectionLetters){
+        const timer = new Timer();
+        timer.start(1);
+
         const words = collectionLetters;
         words.push(letter);
         //console.log('words:', words);

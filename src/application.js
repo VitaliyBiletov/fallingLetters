@@ -57,9 +57,5 @@ export default () => {
                 opacity: 1,
             }, { duration: 1000, queue: false}) //Появление контейнера с выбором букв
         })
-
-        $(document).mouseleave("mouseout", ()=>{
-            console.log("за пределами")
-        });
     })
 }
