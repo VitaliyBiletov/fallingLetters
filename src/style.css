@@ -46,7 +46,7 @@ body{
 
 #selectedLetter #letter {
     float: left;
-    margin: 0 20px;
+    margin: 0;
 }
 
 #selectedLetter #timer {
@@ -124,7 +124,6 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    margin-top: 35px;
     z-index: 2;
 }
 
@@ -134,6 +133,7 @@ body{
     font-size: 7vh;
     color: #0489B1;
     text-align: center;
+    margin-top: 6vh;
 }
 
 .drop-funny{
