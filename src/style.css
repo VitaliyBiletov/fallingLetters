@@ -130,10 +130,11 @@ body{
 .containerWord p{
     /*display: none;*/
     font-family: PropisiRU;
-    font-size: 7vh;
+    margin-top: 80px;
+    font-size: 3em;
     color: #0489B1;
     text-align: center;
-    margin-top: 6vh;
+    /*margin-top: 6vh;*/
 }
 
 .drop-funny{
