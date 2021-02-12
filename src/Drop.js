@@ -1,29 +1,22 @@
 import $ from "jquery";
 import dropImage from './img/drop.gif'
+import funnyDropImage from './img/funny.png'
 
 class Drop {
     constructor(word) {
         this.container = document.createElement('div');
-        this.containerWord = document.createElement('div');
-        this.containerDrop = document.createElement('div');
         this.image = document.createElement('img');
         this.word = document.createElement('p');
 
         this.image.src = dropImage;
         this.word.textContent = String(word);
 
-        this.containerWord.classList.add('containerWord');
-        this.containerDrop.classList.add('containerDrop')
         this.container.classList.add('drop');
         this.container.setAttribute('data-word', `${word}`);
 
-        this.containerDrop.appendChild(this.image);
-        this.containerWord.appendChild(this.word);
+        this.container.appendChild(this.image);
+        this.container.appendChild(this.word);
 
-        this.containerDrop.appendChild(this.containerWord);
-
-        //this.container.appendChild(this.containerWord);
-        this.container.appendChild(this.containerDrop);
     }
 
     move(posX){
@@ -37,6 +30,13 @@ class Drop {
                delete this;
            }
        })
+    }
+
+    setFunny(){
+        $('.drop p').remove();
+        this.image.src = funnyDropImage;
+        $('.drop img').css({'width': '16vw', 'left': '-3vw', 'top':'30px'});
+
     }
 
     getWidth(){

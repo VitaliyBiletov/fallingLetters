@@ -110,8 +110,8 @@ body{
 
 .drop{
     position: absolute;
-    width: 15vh;
-    top: 5vh;
+    width: 12vw;
+    top: 8vh;
     /*   min-width:40px; */
 }
 
@@ -127,14 +127,14 @@ body{
     z-index: 2;
 }
 
-.containerWord p{
-    /*display: none;*/
+.drop p{
+    position: relative;
     font-family: PropisiRU;
-    margin-top: 80px;
-    font-size: 3em;
-    color: #0489B1;
     text-align: center;
-    /*margin-top: 6vh;*/
+    top: 9vw;
+    font-size: 6vw;
+    color: #0489B1;
+    margin: 0;
 }
 
 .drop-funny{
@@ -143,14 +143,11 @@ body{
     left: 50px;
 }
 
-.containerDrop{
+.drop img {
+    width: 100%;
     position: absolute;
-    z-index: 1;
-}
-
-.containerDrop img {
-    /*display: none;*/
-    width: 100px;
+    top: 0;
+    left: 0;
 }
 
 /*collectionLetters*/
