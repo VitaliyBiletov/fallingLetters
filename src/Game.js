@@ -21,10 +21,15 @@ export class Game {
             const currentLetter = getRandomWord(words);
             const drop = new Drop(currentLetter);
             drop.container.addEventListener('click',(e)=>{
-                drop.setFunny();
                 //drop.remove();
-                if (currentLetter == letter){
+                console.log(e.target.innerText);
+                const selectLetter = e.target.innerText;
+                console.log(selectLetter, ' ', letter);
+                if (selectLetter == letter){
                     this.score += 1;
+                    drop.setFunny();
+                } else {
+                    drop.setSad();
                 }
             })
             body.appendChild(drop.container);

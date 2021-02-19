@@ -1,6 +1,7 @@
 import $ from "jquery";
 import dropImage from './img/drop.gif'
 import funnyDropImage from './img/funny.png'
+import sadDropImage from './img/sad.png';
 
 class Drop {
     constructor(word) {
@@ -36,7 +37,12 @@ class Drop {
         $('.drop p').remove();
         this.image.src = funnyDropImage;
         $('.drop img').css({'width': '16vw', 'left': '-3vw', 'top':'30px'});
+    }
 
+    setSad(){
+        $('.drop p').remove();
+        this.image.src = sadDropImage;
+        $('.drop img').css({'width': '16vw', 'left': '-3vw', 'top':'30px'});
     }
 
     getWidth(){

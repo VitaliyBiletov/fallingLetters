@@ -19,7 +19,7 @@ export class Timer {
                 timerContainer.text(`0${Math.trunc(minutes)} : ${Math.trunc(seconds / 10) === 0 ? '0': ''}${seconds}`);
                 let strTimer = `${Math.trunc(minutes)}:${seconds}`;
                 // Выводим строку в блок для показа таймера
-                console.log(strTimer);
+                //console.log(strTimer);
             }
             --timeMinute; // Уменьшаем таймер
         }, 1000)
