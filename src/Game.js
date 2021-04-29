@@ -1,15 +1,16 @@
 import { Drop } from "./Drop";
 import { Timer } from "./Timer";
 import $ from 'jquery';
+import drop_s from './sounds/drop.mp3'
 
 export class Game {
     constructor() {
         this.score = 0;
     }
-    start(letter, collectionLetters){
-        const timer = new Timer();
-        timer.start(1);
-
+    async start(letter, collectionLetters){
+        const timer = new Timer(1);
+        let correctAppearedCount = 0; //количество правильных выпавших букв
+        timer.start()
         const words = collectionLetters;
         words.push(letter);
         //console.log('words:', words);
@@ -20,12 +21,18 @@ export class Game {
         setInterval(()=>{
             const currentLetter = getRandomWord(words);
             const drop = new Drop(currentLetter);
+
+            if (letter === currentLetter){
+                correctAppearedCount += 1;
+            }
             drop.container.addEventListener('click',(e)=>{
                 //drop.remove();
-                console.log(e.target.innerText);
+                const audio = new Audio(drop_s);
+                audio.play();
+                //console.log(e.target.innerText);
                 const selectLetter = e.target.innerText;
-                console.log(selectLetter, ' ', letter);
-                if (selectLetter == letter){
+                //console.log(selectLetter, ' ', letter);
+                if (selectLetter === letter){
                     this.score += 1;
                     drop.setFunny();
                 } else {

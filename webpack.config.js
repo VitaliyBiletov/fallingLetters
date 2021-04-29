@@ -42,6 +42,11 @@ module.exports = {
                 test: /\.(ico|png|jpg|gif)$/,
                 use: ['file-loader']
             }
+            ,
+            {
+                test: /\.(mp3)$/,
+                use: ['file-loader']
+            }
         ]
     }
 }

@@ -95,7 +95,6 @@ export const setOfLetters = () => {
             $('.containerCollectionLetters').hide(200);
             const game = new Game();
             game.start(letter, setOfUppercaseLetters[letter]);
-            //console.log(setOfUppercaseLetters[letter]);
         })
     }
 }

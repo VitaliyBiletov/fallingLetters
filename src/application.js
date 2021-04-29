@@ -5,8 +5,8 @@ import dropImg from './img/drop-info-img.png'
 import CircleType from 'circletype';
 import {Game} from './Game';
 
-export default () => {
 
+export default () => {
     $(document).ready(()=>{
         //Создание кнопки
         const button = document.createElement('button');
