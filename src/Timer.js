@@ -4,17 +4,18 @@ export class Timer {
     constructor(timeMinute) {
         this.timeMinute = timeMinute * 60;
     }
-    start(){
+    start(actionEnd){
         const timerContainer = $('#timer');
         let timeMinute = this.timeMinute
         const timer = setInterval(function () {
             let seconds = timeMinute % 60; // Получаем секунды
             let minutes = timeMinute / 60 % 60; // Получаем минуты
             // Условие если время закончилось то...
-            console.log(timeMinute)
+            //console.log(timeMinute)
             if (timeMinute <= 0) {
                 // Таймер удаляется
                 clearInterval(timer);
+                return actionEnd()
                 // Выводит сообщение что время закончилось
             } else { // Иначе
                 // Создаём строку с выводом времени

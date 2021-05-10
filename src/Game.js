@@ -7,10 +7,15 @@ export class Game {
     constructor() {
         this.score = 0;
     }
-    async start(letter, collectionLetters){
-        const timer = new Timer(1);
+    start(letter, collectionLetters){
+        const timer = new Timer(0.1);
         let correctAppearedCount = 0; //количество правильных выпавших букв
-        timer.start()
+        timer.start(function () {
+            $('.cloud').empty()
+            $('.containerCollectionLetters').remove()
+            $('.container').remove()
+            clearInterval(dropLetter)
+        })
         const words = collectionLetters;
         words.push(letter);
         //console.log('words:', words);
@@ -18,7 +23,7 @@ export class Game {
 
         $('#selectedLetter #letter').text(`Поймай только буквы: ${letter}`);
 
-        setInterval(()=>{
+        const dropLetter = setInterval(()=>{
             const currentLetter = getRandomWord(words);
             const drop = new Drop(currentLetter);
 
