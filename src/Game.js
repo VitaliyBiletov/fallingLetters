@@ -4,17 +4,18 @@ import $ from 'jquery';
 import drop_s from './sounds/drop.mp3'
 
 export class Game {
-    constructor() {
-        this.score = 0;
-    }
+
     start(letter, collectionLetters){
         const timer = new Timer(0.1);
+        let score = 0
+        let err = 0
         let correctAppearedCount = 0; //количество правильных выпавших букв
         timer.start(function () {
             $('.cloud').empty()
             $('.containerCollectionLetters').remove()
             $('.container').remove()
             clearInterval(dropLetter)
+            $('body').append(`<p>Правильных: ${score} из ${correctAppearedCount}; Ошибок: ${err}</p>`)
         })
         const words = collectionLetters;
         words.push(letter);
@@ -38,10 +39,11 @@ export class Game {
                 const selectLetter = e.target.innerText;
                 //console.log(selectLetter, ' ', letter);
                 if (selectLetter === letter){
-                    this.score += 1;
-                    drop.setFunny();
+                    score += 1
+                    drop.setFunny()
                 } else {
-                    drop.setSad();
+                    err += 1
+                    drop.setSad()
                 }
             })
             body.appendChild(drop.container);

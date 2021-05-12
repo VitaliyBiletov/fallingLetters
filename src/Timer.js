@@ -15,7 +15,7 @@ export class Timer {
             if (timeMinute <= 0) {
                 // Таймер удаляется
                 clearInterval(timer);
-                return actionEnd()
+                actionEnd()
                 // Выводит сообщение что время закончилось
             } else { // Иначе
                 // Создаём строку с выводом времени
