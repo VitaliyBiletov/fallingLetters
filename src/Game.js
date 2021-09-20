@@ -6,20 +6,20 @@ import drop_s from './sounds/drop.mp3'
 export class Game {
 
     start(letter, collectionLetters){
-        const timer = new Timer(0.1);
+        const timer = new Timer(0.2);
         let score = 0
         let err = 0
         let correctAppearedCount = 0; //количество правильных выпавших букв
+
         timer.start(function () {
             $('.cloud').empty()
             $('.containerCollectionLetters').remove()
             $('.container').remove()
             clearInterval(dropLetter)
-            $('body').append(`<p>Правильных: ${score} из ${correctAppearedCount}; Ошибок: ${err}</p>`)
+            $('body').append(`<div class="results"><p>Правильных: ${score} из ${correctAppearedCount}; Ошибок: ${err}</p></div>`)
         })
         const words = collectionLetters;
         words.push(letter);
-        //console.log('words:', words);
         const body = document.querySelector('body');
 
         $('#selectedLetter #letter').text(`Поймай только буквы: ${letter}`);
